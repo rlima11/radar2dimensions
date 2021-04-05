@@ -49,3 +49,31 @@ export const message = {
   },
   style: {},
 };
+
+
+////////////////////////////////////////////////////////////// 
+			////////////////////////// Data - General ////////////////////////////// 
+			////////////////////////////////////////////////////////////// 
+
+		export const dataGeneral = [
+        { 
+          name: "Current State",
+          axes: [
+            {axis:"Governance",value:0.22},
+            {axis:"Design",value:0.28},
+            {axis:"Implementation",value:0.29},
+            {axis:"Verification",value:0.17},
+            {axis:"Operations",value:0.22}	
+          ]
+        }, 
+        {
+          name: "Desired State",
+          axes: [
+            {axis:"Governance",value:0.52},
+            {axis:"Design",value:0.43},
+            {axis:"Implementation",value:0.29},
+            {axis:"Verification",value:0.37},
+            {axis:"Operations",value:0.29}
+          ]
+        }
+      ];

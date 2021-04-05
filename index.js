@@ -18,59 +18,27 @@ const rc = require('./radarchart.js');
         
         var color = d3.scaleOrdinal().range(["#CC333F","#00A0B0"]);
 
-        var titleElement = document.createElement('div');
-        titleElement.id = 'Title';
-        document.body.appendChild(titleElement);
-
 
         var divElement = document.createElement('div');
         divElement.className = 'graph';
         document.body.appendChild(divElement);
-////////////////////////////////////////////////////////////// 
-			////////////////////////// Data - General ////////////////////////////// 
-			////////////////////////////////////////////////////////////// 
 
-			var dataGeneral = [
-        { 
-          name: "Current State",
-          axes: [
-            {axis:"Governance",value:0.22},
-            {axis:"Design",value:0.28},
-            {axis:"Implementation",value:0.29},
-            {axis:"Verification",value:0.17},
-            {axis:"Operations",value:0.22}	
-          ]
-        }, 
-        {
-          name: "Desired State",
-          axes: [
-            {axis:"Governance",value:0.52},
-            {axis:"Design",value:0.43},
-            {axis:"Implementation",value:0.29},
-            {axis:"Verification",value:0.37},
-            {axis:"Operations",value:0.29}
-          ]
-        }
-      ];
-
-var radarChartOptionsGeneral = {
-              w: width,
-              h: height,
-              margin: margin,
-              maxValue: 0.5,
-              levels: 5,
-              roundStrokes: true,
-              legend: { title: 'Security SDLC Functions', translateX: 100, translateY: 40 },
-              color: color
-            };
 
 // write viz code here
 const drawViz = (data) => {
-  //viz.readmeViz();
-  //viz.firstViz(data);
-  rc.RadarChart(".graph", dataGeneral, radarChartOptionsGeneral);
   var msg = local.message.fields.dimID[0].name + " by " + local.message.fields.metricID[0].name
-  titleElement.innerText = msg
+  console.log(data)
+  var radarChartOptionsGeneral = {
+    w: width,
+    h: height,
+    margin: margin,
+    maxValue: 0.5,
+    levels: 5,
+    roundStrokes: true,
+    legend: { title: msg, translateX: 100, translateY: 40 },
+    color: color
+  };
+  rc.RadarChart(".graph", local.dataGeneral, radarChartOptionsGeneral);
 };
 
 // renders locally

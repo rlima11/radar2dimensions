@@ -2,22 +2,23 @@
   "name": "Radar2Dimension",
   "organization": "A2Sec",
   "description": "Two Dimension radar chart for DS.",
-  "logoUrl": "https://logo",
-  "organizationUrl": "https://url",
-  "supportUrl": "https://url",
-  "privacyPolicyUrl": "https://url",
-  "termsOfServiceUrl": "https://url",
-  "packageUrl": "https://url",
-  "devMode": "DEVMODE_BOOL",
+  "logoUrl": "https://storage.googleapis.com/dsvisual/Radar2Dimension/ds_radar.png",
+  "organizationUrl": "https://a2sec.com",
+  "supportUrl": "https://a2sec.com",
+  "privacyPolicyUrl": "https://a2sec.com",
+  "termsOfServiceUrl": "https://a2sec.com",
+  "packageUrl": "https://a2sec.com",
+  "devMode": "DEV",
   "components": [
     {
+      "id": "Radar2Dimension",
       "name": "Radar2Dimension",
       "description": "Two Dimension radar chart for DS",
-      "iconUrl": "https://url",
+      "iconUrl": "https://a2sec.com",
       "resource": {
-        "js": "YOUR_GCS_BUCKET/index.js",
-        "config": "YOUR_GCS_BUCKET/index.json",
-        "css": "YOUR_GCS_BUCKET/index.css"
+        "js": "gs://dsvisual/Radar2Dimension/index.js",
+        "config": "gs://dsvisual/Radar2Dimension/index.json",
+        "css": "gs://dsvisual/Radar2Dimension/index.css"
       }
     }
   ]
